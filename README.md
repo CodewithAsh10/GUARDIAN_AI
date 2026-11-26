@@ -66,6 +66,7 @@ GUARDIAN_AI/
 ├── README.md                    # This file
 ├── requirements.txt             # Dependencies listed below
 └── main.py                      # Placeholder (empty)
+```
 
 ### Dataset Source
 
@@ -86,18 +87,14 @@ GUARDIAN_AI/
   'Haryana'/'Delhi'); normalisation is documented in `src.data_loader.NORMALISATION_MAP`.
 - Reporting variations documented in `data_quality_note` column (e.g. West Bengal 2018 data
   substituted per NCRB workbook footnote; Puducherry aggregate row excluded from district records).
-'''
+
 
 ### Installation
 
 1. Clone or ensure the project folder is at `GUARDIAN_AI/`.
 
 2. Create Environment 
-  `conda create -n guardian_ai python=3.11 -y`
-  
-  then
-
-  `conda activate guardian_ai`
+  `conda create -n guardian_ai python=3.11 -y` then `conda activate guardian_ai`
 
 3. Install dependencies:
 
@@ -111,22 +108,6 @@ python -m pip install --force-reinstall --no-deps numpy==1.26.4 pyarrow==17.0.0
 ```
 
 The app opens at http://localhost:8501. Use the sidebar radio to navigate pages.
-
-### How to execute the notebook
-
-The notebook `notebooks/01_crime_analysis.ipynb` contains 27 cells (13 code + 14 Markdown)
-covering all 14 required sections: project introduction, imports, data loading, inspection,
-quality checks, cleaning, EDA, crime trends, state analysis, district analysis, category analysis,
-hotspot identification, visualisations, and findings/conclusion. Run cell-by-cell or use
-`jupyter nbconvert --to notebook --execute --inplace notebooks/01_crime_analysis.ipynb`.
-
-### How to reproduce the complete analysis
-
-1. `pip install -r requirements.txt`
-2. Open `jupyter notebook` and run `notebooks/01_crime_analysis.ipynb` from beginning to end.
-3. Execute `streamlit run dashboard/app.py` to launch the interactive dashboard.
-4. Review `tests/test_module1.py` results (26 tests, all pass).
-5. Static PNG charts are in `visualisations/`. Validation summary is in `src/data_validation.py`.
 
 ### Known limitations (documented for faculty review / viva)
 
@@ -146,10 +127,3 @@ hotspot identification, visualisations, and findings/conclusion. Run cell-by-cel
 - Dataset: 6 Excel workbooks (2017–2022), cleaned to `guardian_crime_master_2017_2022.csv`
 - Python version: 3.13.2
 - Streamlit dashboard URL: http://localhost:8501
-
-### Individual contributions
-
-This project was developed by a single student (AI agent-assisted guidance) as the
-college EPICS Module 1 deliverable. All code, analysis, visualisations and the
-dashboard are the student's own work, reusing and extending the analysis functions
-from `src/` modules. No fabricated statistics, figures or geographical data are included.
