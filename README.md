@@ -90,23 +90,20 @@ GUARDIAN_AI/
 ### Installation
 
 1. Clone or ensure the project folder is at `GUARDIAN_AI/`.
-2. Install dependencies:
+
+2. Create Environment 
+  `conda create -n guardian_ai python=3.11 -y`
+  
+  then
+
+  `conda activate guardian_ai`
+
+3. Install dependencies:
 
 ```bash
-pip install pandas numpy matplotlib seaborn plotly jupyter openpyxl folium geopandas streamlit kaleido
+python -m pip install --force-reinstall --no-deps numpy==1.26.4 pyarrow==17.0.0
 ```
-
-*Note: `kaleido` is needed only if you want to export static Plotly PNGs (already installed).*
-
-3. Verify Python path: `sys.path` must include the project root so `import src` resolves.
-4. Launch the notebook:
-
-```bash
-jupyter notebook  # or: jupyter lab
-# Then open notebooks/01_crime_analysis.ipynb
-```
-
-5. Launch the Streamlit dashboard:
+4. Launch the Streamlit dashboard:
 
 ```bash
   streamlit run dashboard/app.py
