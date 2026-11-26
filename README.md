@@ -86,6 +86,7 @@ GUARDIAN_AI/
   'Haryana'/'Delhi'); normalisation is documented in `src.data_loader.NORMALISATION_MAP`.
 - Reporting variations documented in `data_quality_note` column (e.g. West Bengal 2018 data
   substituted per NCRB workbook footnote; Puducherry aggregate row excluded from district records).
+'''
 
 ### Installation
 
