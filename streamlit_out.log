@@ -1,0 +1,83 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://172.25.219.26:8501
+
+  Help agents write better Streamlit apps?
+  Install the official Streamlit skills by running streamlit skills in your terminal.
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\sta |
+| te\session_state.py:776 in __getitem__                                               |
+|                                                                                      |
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\sta |
+| te\session_state.py:829 in _getitem                                                  |
++--------------------------------------------------------------------------------------+
+KeyError
+
+During handling of the above exception, another exception occurred:
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scr |
+| iptrunner\exec_code.py:136 in exec_func_with_error_handling                          |
+|                                                                                      |
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scr |
+| iptrunner\script_runner.py:934 in code_to_exec                                       |
+|                                                                                      |
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\scr |
+| iptrunner\script_runner.py:181 in _mpa_v1                                            |
+|                                                                                      |
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\navigation\ |
+| page.py:574 in run                                                                   |
+|                                                                                      |
+| C:\Arsh\Project\AIML Models\GUARDIAN_AI\dashboard\app.py:263 in <module>             |
+|                                                                                      |
+|   260                                                                                |
+|   261                                                                                |
+|   262 if __name__ == "__main__":                                                     |
+| > 263     main()                                                                     |
+|   264                                                                                |
+|                                                                                      |
+| C:\Arsh\Project\AIML Models\GUARDIAN_AI\dashboard\app.py:235 in main                 |
+|                                                                                      |
+|   232                                                                                |
+|   233                                                                                |
+|   234 def main():                                                                    |
+| > 235     choice = render_sidebar()                                                  |
+|   236                                                                                |
+|   237     raw_df, clean_df, report = load_data()                                     |
+|   238     crime_cols = get_crime_columns(clean_df)                                   |
+|                                                                                      |
+| C:\Arsh\Project\AIML Models\GUARDIAN_AI\dashboard\app.py:223 in render_sidebar       |
+|                                                                                      |
+|   220             unsafe_allow_html=True,                                            |
+|   221         )                                                                      |
+|   222         st.markdown("### Navigation")                                          |
+| > 223         choice = st.radio("Go to", list(PAGES.keys()), label_visibility="colla |
+|   224         st.markdown("---")                                                     |
+|   225         st.markdown("### Data source")                                         |
+|   226         st.caption("NCRB district-wise IPC crime data, 2017–2022.")            |
+|                                                                                      |
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\met |
+| rics_util.py:732 in wrapped_func                                                     |
+|                                                                                      |
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\elements\wi |
+| dgets\radio.py:455 in radio                                                          |
+|                                                                                      |
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\elements\wi |
+| dgets\radio.py:554 in _radio                                                         |
+|                                                                                      |
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\sta |
+| te\safe_session_state.py:118 in filtered_state                                       |
+|                                                                                      |
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\sta |
+| te\session_state.py:722 in filtered_state                                            |
+|                                                                                      |
+| C:\Users\victus\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\sta |
+| te\session_state.py:783 in __getitem__                                               |
++--------------------------------------------------------------------------------------+
+KeyError: 'st.session_state has no key 
+"$$WIDGET_ID-8c87ff9589facc4c12116ccd549966c1-ov_year". Did you forget to initialize it?
+More info: 
+https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
